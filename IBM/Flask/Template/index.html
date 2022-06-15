@@ -1,0 +1,53 @@
+<html>
+<head>
+<style>
+h1 {text-align: center;}
+p {text-align: center;}
+div {text-align: center;}
+input[type=submit]{
+  background-color: #FFD700; 
+   padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+</style>
+
+</head>
+
+<body>
+<h1>Prediction of Flight delay</h1>
+
+<form action="/prediction" method="POST">
+  <label for="fno">Flight Number:<input type="text" id="fno" name="name"></label><br><br>
+  <label for="mo">Month:<input type="text" id="mo" name="month"></label><br><br>
+  <label for="Dmo">Day of Month:<input type="text" id="Dmo" name="dayofmonth"></label><br><br>
+  <label for="Dmw">Day of Week:<input type="text" id="Dmw" name="dayofweek"></label><br><br>
+  <label for="ori">Origin:</label>
+
+<select name="origin" id="ori">
+  <option value="msp">msp</option>
+  <option value="dtw">dtw</option>
+  <option value="jfk">jfk</option>
+  <option value="sea">sea</option>
+  <option value="atl">atl</option>
+</select><br><br>
+
+  <label for="Des">Destination:</label>
+
+<select name="destination" id="Des">
+  <option value="msp">msp</option>
+  <option value="dtw">dtw</option>
+  <option value="jfk">jfk</option>
+  <option value="sea">sea</option>
+  <option value="atl">atl</option>
+</select><br><br>
+<label for="SDT">Scheduled Departure Time:<input type="text" id="SDT" name="dept"></label><br><br>
+<label for="SAT">Scheduled Arrival Time:<input type="text" id="SAT" name="arrtime"></label><br><br>
+<label for="AAT">Actual Depature Time:<input type="text" id="AAT" name="actdept"></label><br><br>
+  <input type="submit" value="Submit">
+</form> 
+<b>{{showcase}}</b>
+
+</body>
+</html>
